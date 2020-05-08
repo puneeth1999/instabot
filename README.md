@@ -1,5 +1,5 @@
 # INSTABOT
-#### Inititally, download chromedriver.exe file.
+#### Inititally, download all the files.
 
 #### 1. Keep the webdriver for chrome i.e, ```chromedriver.exe``` file in the same folder as the scripts.
 
