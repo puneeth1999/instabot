@@ -8,3 +8,5 @@
 #### 3. Run ```instabot.py```
 
 # That's it, YOU'RE GOOD TO GO.
+
+#### Contributed by Puneeth Choppanati
