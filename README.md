@@ -1,4 +1,7 @@
 # INSTABOT
+#### Prerequisites:
+1. Python
+2. Google Chrome browser
 #### Inititally, download all the files.
 
 #### 1. Keep the webdriver for chrome i.e, ```chromedriver.exe``` file in the same folder as the scripts.
