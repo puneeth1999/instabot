@@ -5,6 +5,7 @@ from time import sleep
 import os
 from password import pw
 from password import us
+
 import time
 
 #Driver for chrome
@@ -115,30 +116,47 @@ names_following = [name.text for name in links_f if name.text != '']
 
 '''______________PEOPLE GHOSTING YOU_____________'''
 c = 0
+ghosting_you = []
 print('\n\n')
 for n in names_following:
     if n in names_followers:
         continue
     else:
         c += 1
-        print(n,'is ghosting you' )
-print('\n\n\n\n')
+        ghosting_you.append(str(n))
+# print('\n\n\n\n')
 print(c,'number of people are ghosting you as of now')
-print('\n\n\n\n')
+# print('\n\n\n\n')
 
 '''_____________PEOPLE YOU'RE GHOSTING_________'''
 
 k = 0
-print('\n\n')
+you_being_a_ghost_to = []
+# print('\n\n')
 for n in names_followers:
     if n in names_following:
         continue
     else:
         k += 1
-        print('You\'re ghosting', n)
-print('\n\n\n\n')
+        you_being_a_ghost_to.append(str(n))
+# print('\n\n\n\n')
 print('You have been ghosting', k, 'number of people as of now')
 
+print('The list of poeple ghosting you:\n', ghosting_you)
+print('You\'ve been ghosting\n', you_being_a_ghost_to)
 
+fhand = open('output_file.txt', 'w')
+fhand.writelines('The list of poeple ghosting you:\n')
+for n in ghosting_you:
+    fhand.writelines(n)
+    fhand.writelines('\n')
+fhand.writelines('\n')
+fhand.writelines('\n')
+fhand.writelines('\n')
+fhand.writelines('You\'ve been ghosting\n')
+for n in you_being_a_ghost_to:
+    fhand.writelines(n)
+    fhand.writelines('\n')
 
+fhand.close()
 driver.close()
