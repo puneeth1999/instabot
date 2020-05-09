@@ -3,8 +3,8 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from time import sleep
 import os
-from password import pw
 from password import us
+from password import pw
 
 import time
 
@@ -125,22 +125,20 @@ for n in names_following:
         c += 1
         ghosting_you.append(str(n))
 # print('\n\n\n\n')
-print(c,'number of people are ghosting you as of now')
+print(len(ghosting_you),'number of people are ghosting you as of now')
 # print('\n\n\n\n')
 
 '''_____________PEOPLE YOU'RE GHOSTING_________'''
 
-k = 0
 you_being_a_ghost_to = []
 # print('\n\n')
 for n in names_followers:
     if n in names_following:
         continue
     else:
-        k += 1
         you_being_a_ghost_to.append(str(n))
 # print('\n\n\n\n')
-print('You have been ghosting', k, 'number of people as of now')
+print('You have been ghosting', len(you_being_a_ghost_to), 'number of people as of now')
 
 print('The list of poeple ghosting you:\n', ghosting_you)
 print('You\'ve been ghosting\n', you_being_a_ghost_to)
